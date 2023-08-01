@@ -1,20 +1,19 @@
 package AList;
 
-import Inheritance.ListCS61b;
+public class Alist_inherited<Type> {
 
-public class AList<Type> implements ListCS61b<Type> {
 
     private int size;
     private Type[] arr;
 
-    public AList(){
+    public Alist_inherited(){
         size = 0;
         //arr = new Type[100];    Cant do this
         arr = (Type[]) new Object[100];
     }
 
     public int size() {
-      return size;
+        return size;
 
     }
 
@@ -48,8 +47,7 @@ public class AList<Type> implements ListCS61b<Type> {
     public Type get(int i) {
         return arr[i];
     }
-
-
+    
     public static void main(String[] args) {
         AList<Integer> list = new AList<Integer>();
 
@@ -67,5 +65,4 @@ public class AList<Type> implements ListCS61b<Type> {
 
 
     }
-
 }
